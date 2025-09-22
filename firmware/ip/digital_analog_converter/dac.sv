@@ -5,30 +5,35 @@
 
 module dac(
     input  logic              clk,
-    input  logic [bits-1:0]   digital_in,
-    input  real               vref,
+    input  logic [bits-1:0]   s_axis_tdata,
+    input  logic              s_axis_tready,
+    input  logic              s_axis_tvalid,
     output real               aout
 );
-    
-    parameter int bits = 32;    // DAC resolution - 32 bits
+    parameter real vref;
+    parameter int bits = 16;    // DAC resolution - 32 bits
     parameter time td = 1ns;    // Processing delay of DAC
     real aout_reg;
     
     always_ff @(posedge clk) begin
-        real ref_val;
-        real new_val;
-        
-        new_val = 0;
-        ref_val = vref;
-        
-        for (int i = 0; i < bits; i++) begin
-            ref_val = ref_val / 2.0;
-            if (digital_in[i])
-                new_val = new_val + ref_val;
+        if(s_axis_tready) begin
+            real ref_val;
+            real new_val;
+
+            new_val = 0;
+            ref_val = val;
+
+            for (int i = 0; i < bits; i++) begin
+                ref_val = ref_val/ 2.0;
+                if (s_axis_tdata[i]) begin
+                    new_val = new_val + ref_val;
+                end
+            end
+            
+            // mew value w/ delay
+            #(td) aout_reg = new_val;
+
         end
-        
-        // new value w/ delay
-        #(td) aout_reg = new_val;
     end
     
     // connect internal register to output
