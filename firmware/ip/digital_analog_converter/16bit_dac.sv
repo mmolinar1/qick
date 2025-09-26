@@ -8,7 +8,7 @@ module dac(
     input  logic [bits-1:0]   s_axis_tdata,
     output real               aout
 );
-    parameter real vref = 1;
+    parameter real vref = 5.0;
     parameter int bits = 16;    // DAC resolution - 16 bits
     real aout_reg;
     
