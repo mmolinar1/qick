@@ -1,27 +1,23 @@
 // HMC HRL Clinic 25-26
 
-// system verilog modeling for a 32 bit DAC
+// system verilog modeling for a 16 bit DAC
 // based on a verilog-ams dac model
 
-module dac(
+module 16bit_dac(
     input  logic              clk,
     input  logic [bits-1:0]   s_axis_tdata,
-    input  logic              s_axis_tready,
-    input  logic              s_axis_tvalid,
     output real               aout
 );
-    parameter real vref;
-    parameter int bits = 16;    // DAC resolution - 32 bits
-    parameter time td = 1ns;    // Processing delay of DAC
+    parameter real vref = 1;
+    parameter int bits = 16;    // DAC resolution - 16 bits
     real aout_reg;
     
     always_ff @(posedge clk) begin
-        if(s_axis_tready) begin
             real ref_val;
             real new_val;
 
             new_val = 0;
-            ref_val = val;
+            ref_val = vref;
 
             for (int i = 0; i < bits; i++) begin
                 ref_val = ref_val/ 2.0;
@@ -30,10 +26,9 @@ module dac(
                 end
             end
             
-            // mew value w/ delay
-            #(td) aout_reg = new_val;
+            // new value
+            aout_reg = new_val;
 
-        end
     end
     
     // connect internal register to output
