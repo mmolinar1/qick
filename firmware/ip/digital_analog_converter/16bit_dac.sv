@@ -3,7 +3,7 @@
 // system verilog modeling for a 16 bit DAC
 // based on a verilog-ams dac model
 
-module 16bit_dac(
+module dac(
     input  logic              clk,
     input  logic [bits-1:0]   s_axis_tdata,
     output real               aout
