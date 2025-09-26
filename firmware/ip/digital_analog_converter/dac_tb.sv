@@ -20,6 +20,7 @@ module dac_tb();
     parameter int bits = dut.bits;    // DAC resolution in bits
     parameter time td = dut.td;       // Processing delay of DAC
     real aout_reg;
+    real expected_out;
 
     // Generate clock: 10 time units period (5 high, 5 low)
     always begin
@@ -41,11 +42,14 @@ module dac_tb();
         end
 
         digital_in <= '1;// biggest input
-         #50;
-         real expected_out = vref * (real'(2**bits - 1)) / (real'(2**bits));
+        
+         #50;         
+         expected_out = vref * (real'(2**bits - 1)) / (real'(2**bits));
+         
          assert($abs(aout - expected_out) < 1e-9) else begin
             $error("aout is not its expected value with a max input");
             errors++;
+        end
 
         // stop the simulation
         if (errors == 0)
