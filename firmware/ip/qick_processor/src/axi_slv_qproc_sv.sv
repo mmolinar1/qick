@@ -45,10 +45,10 @@ module axi_slv_qproc_sv #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 6)(
     output logic [7:0] READ_SEL,
     input logic [31:0] MEM_DT_O,
     input logic [31:0] TPROC_R_DT1,
-    input logic [31:0] TPROC_W_DT2,
+    input logic [31:0] TPROC_R_DT2,
     input logic [31:0] TIME_USR,
     input logic [31:0] TPROC_STATUS,
-    input logic [31:0] TPROC_DEBUG,
+    input logic [31:0] TPROC_DEBUG
 );
 
     // AXI4LITE signals
@@ -409,7 +409,7 @@ module axi_slv_qproc_sv #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 6)(
     assign MEM_LEN = slv_reg3[15:0];
     assign MEM_DT_I = slv_reg4[31:0];
     assign TPROC_W_DT1 = slv_reg5[31:0];
-    assign TPROC_W_DT@ = slv_reg6[31:0];
+    assign TPROC_W_DT2 = slv_reg6[31:0];
     assign CORE_CFG = slv_reg7[7:0];
     assign READ_SEL = slv_reg8[7:0];
 

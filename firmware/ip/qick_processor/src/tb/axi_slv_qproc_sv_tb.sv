@@ -2,7 +2,7 @@
 // sv: qick > firmware > ip > qick_processor > src > axi_slv_qproc_sv
 // vhdl: qick > firmware > ip > qick_processor > src > axi_slv_qproc
 
-module axi_slv_qproc_sv_tb #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 6) ()
+module axi_slv_qproc_sv_tb #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 6) ();
 
     // Common Inputs
     logic aclk, aresetn, awvalid, wvalid, bready, arvalid, rready;
@@ -45,7 +45,7 @@ module axi_slv_qproc_sv_tb #(parameter DATA_WIDTH = 32, parameter ADDR_WIDTH = 6
 
         .TPROC_CTRL(TPROC_CTRL_sv), .TPROC_CFG(TPROC_CFG_sv), .MEM_ADDR(MEM_ADDR_sv), .MEM_LEN(MEM_LEN_sv),
         .MEM_DT_I(MEM_DT_I_sv), .TPROC_W_DT1(TPROC_W_DT1_sv), .TPROC_W_DT2(TPROC_W_DT2_sv), .CORE_CFG(CORE_CFG_sv),
-        .READ_SEL(READ_SEL_sv), .MEM_DT_O(MEM_DT_O), .TPROC_R_DT1(TPROC_R_DT1), .TPROC_W_DT2(TPROC_R_DT2), // Assuming TPROC_R_DT2 for SV DUT
+        .READ_SEL(READ_SEL_sv), .MEM_DT_O(MEM_DT_O), .TPROC_R_DT1(TPROC_R_DT1), .TPROC_R_DT2(TPROC_R_DT2),
         .TIME_USR(TIME_USR), .TPROC_STATUS(TPROC_STATUS), .TPROC_DEBUG(TPROC_DEBUG)
     );
 
