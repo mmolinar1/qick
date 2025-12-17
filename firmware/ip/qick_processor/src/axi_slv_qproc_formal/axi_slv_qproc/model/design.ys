@@ -1,0 +1,14 @@
+# running in axi_slv_qproc/src/
+plugin -i ghdl
+plugin -i slang
+
+ghdl --std=08 axi_slv_qproc.vhd -e axi_slv_qproc
+read_verilog -sv -formal axi_slv_qproc_sv.sv axi_slv_qproc_sva.sv
+
+hierarchy -check
+
+prep -top axi_slv_qproc_equiv
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

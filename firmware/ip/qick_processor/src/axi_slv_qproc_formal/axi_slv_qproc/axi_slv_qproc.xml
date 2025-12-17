@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2025-11-20T15:07:08" hostname="Matthews-MacBook-Air-10.local" package="axi_slv_qproc" id="0" name="default" tests="35" errors="0" failures="0" time="2" skipped="0">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:299.13-299.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:299.13-299.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_299_529">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:300.13-300.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:300.13-300.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_300_531">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:301.13-301.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:301.13-301.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_301_533">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:302.13-302.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:302.13-302.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_302_535">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:303.13-303.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:303.13-303.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_303_537">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:304.13-304.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:304.13-304.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_304_539">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:305.13-305.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:305.13-305.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_305_541">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:306.13-306.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:306.13-306.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_306_543">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:307.13-307.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:307.13-307.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_307_545">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:308.13-308.50" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:308.13-308.50" id="_witness_.check_assert_axi_slv_qproc_sva_sv_308_547">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:309.13-309.52" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:309.13-309.52" id="_witness_.check_assert_axi_slv_qproc_sva_sv_309_549">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:310.13-310.52" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:310.13-310.52" id="_witness_.check_assert_axi_slv_qproc_sva_sv_310_551">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:311.13-311.52" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:311.13-311.52" id="_witness_.check_assert_axi_slv_qproc_sva_sv_311_553">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:312.13-312.52" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:312.13-312.52" id="_witness_.check_assert_axi_slv_qproc_sva_sv_312_555">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:313.13-313.52" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:313.13-313.52" id="_witness_.check_assert_axi_slv_qproc_sva_sv_313_557">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:314.13-314.52" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:314.13-314.52" id="_witness_.check_assert_axi_slv_qproc_sva_sv_314_559">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:315.13-315.44" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:315.13-315.44" id="_witness_.check_assert_axi_slv_qproc_sva_sv_315_561">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:316.13-316.58" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:316.13-316.58" id="_witness_.check_assert_axi_slv_qproc_sva_sv_316_563">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:325.13-325.48" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:325.13-325.48" id="_witness_.check_assert_axi_slv_qproc_sva_sv_325_567">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:326.13-326.46" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:326.13-326.46" id="_witness_.check_assert_axi_slv_qproc_sva_sv_326_569">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:327.13-327.45" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:327.13-327.45" id="_witness_.check_assert_axi_slv_qproc_sva_sv_327_571">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:328.13-328.46" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:328.13-328.46" id="_witness_.check_assert_axi_slv_qproc_sva_sv_328_573">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:329.13-329.48" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:329.13-329.48" id="_witness_.check_assert_axi_slv_qproc_sva_sv_329_575">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:330.13-330.45" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:330.13-330.45" id="_witness_.check_assert_axi_slv_qproc_sva_sv_330_577">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:331.13-331.45" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:331.13-331.45" id="_witness_.check_assert_axi_slv_qproc_sva_sv_331_579">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:332.13-332.46" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:332.13-332.46" id="_witness_.check_assert_axi_slv_qproc_sva_sv_332_581">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:333.13-333.54" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:333.13-333.54" id="_witness_.check_assert_axi_slv_qproc_sva_sv_333_583">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:334.13-334.53" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:334.13-334.53" id="_witness_.check_assert_axi_slv_qproc_sva_sv_334_585">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:335.13-335.52" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:335.13-335.52" id="_witness_.check_assert_axi_slv_qproc_sva_sv_335_587">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:336.13-336.51" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:336.13-336.51" id="_witness_.check_assert_axi_slv_qproc_sva_sv_336_589">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:337.13-337.52" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:337.13-337.52" id="_witness_.check_assert_axi_slv_qproc_sva_sv_337_591">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:338.13-338.56" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:338.13-338.56" id="_witness_.check_assert_axi_slv_qproc_sva_sv_338_593">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:339.13-339.56" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:339.13-339.56" id="_witness_.check_assert_axi_slv_qproc_sva_sv_339_595">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:340.13-340.53" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:340.13-340.53" id="_witness_.check_assert_axi_slv_qproc_sva_sv_340_597">
+</testcase>
+<testcase classname="default" name="Property ASSERT in axi_slv_qproc_equiv at axi_slv_qproc_sva.sv:341.13-341.53" time="0" type="ASSERT" location="axi_slv_qproc_sva.sv:341.13-341.53" id="_witness_.check_assert_axi_slv_qproc_sva_sv_341_599">
+</testcase>
+<system-out>SBY 15:07:06 [axi_slv_qproc] Removing directory '/Users/matthewmolinar/Desktop/hrl-25-26/formal_verification/exp/axi_slv_qproc'.
+SBY 15:07:06 [axi_slv_qproc] Copy '/Users/matthewmolinar/Desktop/hrl-25-26/formal_verification/exp/axi_slv_qproc.vhd' to '/Users/matthewmolinar/Desktop/hrl-25-26/formal_verification/exp/axi_slv_qproc/src/axi_slv_qproc.vhd'.
+SBY 15:07:06 [axi_slv_qproc] Copy '/Users/matthewmolinar/Desktop/hrl-25-26/formal_verification/exp/axi_slv_qproc_sv.sv' to '/Users/matthewmolinar/Desktop/hrl-25-26/formal_verification/exp/axi_slv_qproc/src/axi_slv_qproc_sv.sv'.
+SBY 15:07:06 [axi_slv_qproc] Copy '/Users/matthewmolinar/Desktop/hrl-25-26/formal_verification/exp/axi_slv_qproc_sva.sv' to '/Users/matthewmolinar/Desktop/hrl-25-26/formal_verification/exp/axi_slv_qproc/src/axi_slv_qproc_sva.sv'.
+SBY 15:07:06 [axi_slv_qproc] engine_0: smtbmc boolector
+SBY 15:07:06 [axi_slv_qproc] base: starting process &quot;cd axi_slv_qproc/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 15:07:06 [axi_slv_qproc] base: finished (returncode=0)
+SBY 15:07:06 [axi_slv_qproc] prep: starting process &quot;cd axi_slv_qproc/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 15:07:06 [axi_slv_qproc] prep: finished (returncode=0)
+SBY 15:07:06 [axi_slv_qproc] smt2: starting process &quot;cd axi_slv_qproc/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 15:07:06 [axi_slv_qproc] smt2: finished (returncode=0)
+SBY 15:07:06 [axi_slv_qproc] engine_0.basecase: starting process &quot;cd axi_slv_qproc; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 15:07:06 [axi_slv_qproc] engine_0.induction: starting process &quot;cd axi_slv_qproc; yosys-smtbmc -s boolector --presat --unroll -i --noprogress -t 20  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY 15:07:06 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Solver: boolector
+SBY 15:07:06 [axi_slv_qproc] engine_0.induction: ##   0:00:00  Solver: boolector
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 15:07:07 [axi_slv_qproc] engine_0.induction: ##   0:00:00  Trying induction in step 20..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 15:07:07 [axi_slv_qproc] engine_0.induction: ##   0:00:00  Trying induction in step 19..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 15:07:07 [axi_slv_qproc] engine_0.induction: ##   0:00:00  Trying induction in step 18..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 15:07:07 [axi_slv_qproc] engine_0.induction: ##   0:00:00  Trying induction in step 17..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 15:07:07 [axi_slv_qproc] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 15:07:07 [axi_slv_qproc] engine_0.induction: ##   0:00:00  Status: passed
+SBY 15:07:07 [axi_slv_qproc] engine_0.induction: finished (returncode=0)
+SBY 15:07:07 [axi_slv_qproc] engine_0.induction: Status returned by engine for induction: pass
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY 15:07:07 [axi_slv_qproc] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assumptions in step 15..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assertions in step 15..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assumptions in step 16..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assertions in step 16..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assumptions in step 17..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assertions in step 17..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assumptions in step 18..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assertions in step 18..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assumptions in step 19..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Checking assertions in step 19..
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: ##   0:00:01  Status: passed
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: finished (returncode=0)
+SBY 15:07:08 [axi_slv_qproc] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 15:07:08 [axi_slv_qproc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY 15:07:08 [axi_slv_qproc] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY 15:07:08 [axi_slv_qproc] summary: engine_0 (smtbmc boolector) returned pass for basecase
+SBY 15:07:08 [axi_slv_qproc] summary: engine_0 (smtbmc boolector) returned pass for induction
+SBY 15:07:08 [axi_slv_qproc] summary: engine_0 did not produce any traces
+SBY 15:07:08 [axi_slv_qproc] summary: successful proof by k-induction.
+SBY 15:07:08 [axi_slv_qproc] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>
