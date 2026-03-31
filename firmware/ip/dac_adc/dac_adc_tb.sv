@@ -13,9 +13,9 @@ module dac_adc_tb();
 
     // Clks
     parameter time DAC_FS_CLK = 104;                    // ~9.6 GHz
-    parameter time DAC_CLK    = DAC_FS_CLK * N_DAC;     // = 1664 ps (~600 MHz)
-    parameter time ADC_FS_CLK = 408;                    // ~2.4510 GHz (made an even period to avoid rounding issues)
-    parameter time ADC_CLK    = ADC_FS_CLK * N_ADC;     // = 3264 ps (~306.4 MHz)
+    parameter time DAC_CLK    = DAC_FS_CLK * N_DAC;     // 1664 ps (~600 MHz)
+    parameter time ADC_FS_CLK = 408;                    // ~2.4510 GHz
+    parameter time ADC_CLK    = ADC_FS_CLK * N_ADC;     // 3264 ps (~306.4 MHz)
 
     // Signals
     logic dac_clk = 0;
@@ -23,21 +23,24 @@ module dac_adc_tb();
     logic dac_fs_clk = 0;
     logic adc_fs_clk = 0;
     
-    logic s_axis_tvalid;
-    logic [N_DAC*BITS-1:0] s_axis_tdata;
+    logic s_axis_tvalid = 0;
+    logic [N_DAC*BITS-1:0] s_axis_tdata = 0;
     
     logic m_axis_tvalid;
     logic [N_ADC*BITS-1:0] m_axis_tdata;
     
     logic signed [15:0] ramp_val;
-    integer i;
+    
+    // File handles
+    integer f_in, f_out;
 
     // DUT
     dac_adc_loop #(
         .BITS(BITS),
         .V_REF(V_REF),
         .N_DAC(N_DAC),
-        .N_ADC(N_ADC)
+        .N_ADC(N_ADC),
+        .USE_INTERPOLATION(0)    // ZOH
     ) dut (
         .dac_clk(dac_clk),
         .adc_clk(adc_clk),
@@ -49,21 +52,15 @@ module dac_adc_tb();
         .m_axis_tvalid(m_axis_tvalid)
     );
 
-    // try 2 independent clocks and derive the other clocks based on these clocks
     // Clock Generation
-    always begin
-        dac_clk = 1; #(DAC_CLK / 2);
-        dac_clk = 0; #(DAC_CLK / 2);
-    end
-
     always begin
         dac_fs_clk = 1; #(DAC_FS_CLK / 2);
         dac_fs_clk = 0; #(DAC_FS_CLK / 2);
     end
 
     always begin
-        adc_clk = 1; #(ADC_CLK / 2);
-        adc_clk = 0; #(ADC_CLK / 2);
+        dac_clk = 1; #(DAC_CLK / 2);
+        dac_clk = 0; #(DAC_CLK / 2);
     end
 
     always begin
@@ -71,19 +68,37 @@ module dac_adc_tb();
         adc_fs_clk = 0; #(ADC_FS_CLK / 2);
     end
 
-    // Unpack ADC output to display the individual 16-bit samples
-    wire signed [15:0] adc_out_0 = m_axis_tdata[0*16 +: 16];
-    wire signed [15:0] adc_out_1 = m_axis_tdata[1*16 +: 16];
-    wire signed [15:0] adc_out_2 = m_axis_tdata[2*16 +: 16];
-    wire signed [15:0] adc_out_3 = m_axis_tdata[3*16 +: 16];
-    wire signed [15:0] adc_out_4 = m_axis_tdata[4*16 +: 16];
-    wire signed [15:0] adc_out_5 = m_axis_tdata[5*16 +: 16];
-    wire signed [15:0] adc_out_6 = m_axis_tdata[6*16 +: 16];
-    wire signed [15:0] adc_out_7 = m_axis_tdata[7*16 +: 16];
+    always begin
+        adc_clk = 1; #(ADC_CLK / 2);
+        adc_clk = 0; #(ADC_CLK / 2);
+    end
 
-    // Test
+    // CSV Logging
     initial begin
-        // Waveform dumping
+        f_in = $fopen("dac_input.csv", "w");
+        $fwrite(f_in, "Time_ps,Value\n");
+        
+        f_out = $fopen("adc_output.csv", "w");
+        $fwrite(f_out, "Time_ps,Value\n");
+    end
+
+    // Log All DAC Inputs 
+    always @(posedge dac_clk) begin
+        if (s_axis_tvalid) begin
+            for (int k = 0; k < N_DAC; k++) begin
+                $fwrite(f_in, "%.0f,%d\n", $realtime + (k * 104.0), $signed(s_axis_tdata[k*BITS +: BITS]));
+            end
+        end
+    end
+
+    // Log All ADC Outputs
+    always @(posedge adc_fs_clk) begin
+        // Invert the MSB to convert to two's complement
+        $fwrite(f_out, "%.0f,%d\n", $realtime, $signed({ ~dut.adc_serial_out[BITS-1], dut.adc_serial_out[BITS-2:0] }));
+    end
+
+    // Test Stimulus
+    initial begin
         $dumpfile("dac_adc_waves.vcd");
         $dumpvars(0, dac_adc_tb);
 
@@ -94,25 +109,23 @@ module dac_adc_tb();
         #1000;
         s_axis_tvalid = 1;
 
-        // Testing with sine wave
-        for (int i = 0; i < 1000; i++) begin
+        // Generate Sine Wave
+        for (int i = 0; i < 2000; i++) begin 
             for (int k = 0; k < N_DAC; k++) begin
-                // Calculate the sine wave for each sample
-                // i is the slow clock index, k is the fast clock sample index
-                ramp_val = $rtoi(32000.0 * $sin(2.0 * 3.14159 * (i * N_DAC + k) / (16.0 * N_DAC)));  // make faster period
+                ramp_val = $rtoi(16000.0 * $sin(2.0 * 3.14159 * (real'(i * N_DAC + k)) / 200.0)); 
                 s_axis_tdata[k*BITS +: BITS] = ramp_val;
             end
             @(posedge dac_clk);
         end
 
-        #1000;
-        // Testing with constant signal
-        ramp_val = 16'h4000;
-        s_axis_tdata = {N_DAC{ramp_val}};
+        repeat(50) @(posedge adc_clk);
 
-        repeat(100) @(posedge dac_clk);
-
-        // End simulation
+        #10;
+        
+        // Close files
+        $fclose(f_in);
+        $fclose(f_out);
+        
         $finish;
     end
 

@@ -20,13 +20,13 @@ module adc_model #(
     end
 
     // Behavioral model of ADC
-    always @(posedge clk) begin
+    always @(negedge clk) begin
 
         // Scale input to a value between 0 and (2^BITS - 1)
         scaled_input = analog_in + V_REF;
 
         // Quantize value to the nearest integer
-        digital_out_reg = $rtoi(scaled_input / quantization_step); // $rtoi is real-to-integer conversion
+        digital_out_reg = $rtoi(scaled_input / quantization_step);
 
         // Clip result to ensure it stays within: 0 to 2^BITS - 1
         if (digital_out_reg >= (1 << BITS)) begin
